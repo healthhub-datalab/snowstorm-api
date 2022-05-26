@@ -69,3 +69,14 @@ export default {
   requestDelete,
   delete: requestDelete,
 };
+export * from './lib/types';
+export {
+  GET,
+  POST,
+  PUT,
+  DELETE,
+  SNOWSTORM_GET,
+  SNOWSTORM_POST,
+  SNOWSTORM_PUT,
+  SNOWSTORM_DELETE,
+};
