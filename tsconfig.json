@@ -6,7 +6,7 @@
       "DOM",
       "DOM.iterable"
     ],
-    "module": "esnext",
+    "module": "umd",
     "moduleResolution": "node",
     "declaration": true,
     "outDir": "./dist",
