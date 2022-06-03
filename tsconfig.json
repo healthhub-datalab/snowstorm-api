@@ -6,7 +6,7 @@
       "DOM",
       "DOM.iterable"
     ],
-    "module": "umd",
+    "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
     "outDir": "./dist",
