@@ -543,9 +543,9 @@ export interface GET {
         };
         ruleStrength: string;
         contentType: string;
-      };
+      }[];
       // https://github.com/IHTSDO/snowstorm/blob/59171afc/src/main/java/org/snomed/snowstorm/mrcm/MRCMService.java#L156
-      attributeRange: unknown;
+      attributeRange: unknown[];
     }>,
     parameterType: {
       branch: string,
