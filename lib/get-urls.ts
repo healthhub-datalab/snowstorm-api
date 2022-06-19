@@ -522,7 +522,31 @@ export interface GET {
     },
   }
   '/mrcm/{branch}/domain-attributes': {
-    responseType: ItemsPage<ConceptMini>,
+    responseType: ItemsPage<ConceptMini & {
+      // https://github.com/IHTSDO/snowstorm/blob/59171afc/src/main/java/org/snomed/snowstorm/mrcm/MRCMService.java#L147
+      attributeDomain: {
+        id: string;
+        effectiveTime: string; // YYYYMMDD
+        active: boolean;
+        referencedComponentId: string;
+        domainId: string;
+        grouped: boolean;
+        attributeCardinality: {
+          value: string;
+          min?: number;
+          max?: number;
+        };
+        attributeInGroupCardinality: {
+          value: string;
+          min?: number;
+          max?: number;
+        };
+        ruleStrength: string;
+        contentType: string;
+      };
+      // https://github.com/IHTSDO/snowstorm/blob/59171afc/src/main/java/org/snomed/snowstorm/mrcm/MRCMService.java#L156
+      attributeRange: unknown;
+    }>,
     parameterType: {
       branch: string,
       parentIds?: Array<number>,
