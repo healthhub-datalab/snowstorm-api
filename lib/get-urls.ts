@@ -369,7 +369,7 @@ export interface GET {
     },
   }
   '/{branch}/concepts/{conceptId}/descendants': {
-    responseType: ItemsPage<Record<string, unknown>>,
+    responseType: ItemsPage<ConceptMini>,
     parameterType: {
       branch: string,
       conceptId: string,
