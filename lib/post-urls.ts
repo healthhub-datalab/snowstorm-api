@@ -198,7 +198,7 @@ export interface POST {
     responseType: void,
     parameterType: {
       id: string,
-      conceptId: number,
+      conceptId: string,
     },
     headerType: undefined,
     bodyType: {

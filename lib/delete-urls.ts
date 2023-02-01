@@ -32,7 +32,7 @@ export interface DELETE {
     responseType: void,
     parameterType: {
       id: string,
-      conceptId: number,
+      conceptId: string,
     },
     headerType: undefined,
     bodyType: undefined,

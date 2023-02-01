@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable max-len */
 export interface ConceptsInForm {
-  inferredConceptIds: Array<number>;
-  statedConceptIds: Array<number>;
+  inferredConceptIds: Array<string>;
+  statedConceptIds: Array<string>;
 }
 
 export interface Concept {
@@ -118,7 +118,7 @@ export interface Relationship {
   effectiveTime: string;
   effectiveTimeI: number;
   end: string;
-  groupId: number;
+  groupId: string;
   grouped: boolean;
   id: string;
   internalId: string;
@@ -302,7 +302,7 @@ export interface ApiError {
 }
 
 export interface BranchReview {
-  changedConcepts: Array<number>;
+  changedConcepts: Array<string>;
   id: string;
   lastUpdated: string;
   source: BranchState;
@@ -449,7 +449,7 @@ export interface ConceptBulkLoadRequest {
 }
 
 export interface AsyncConceptChangeBatch {
-  conceptIds: Array<number>;
+  conceptIds: Array<string>;
   endTime: string;
   id: string;
   message: string;
@@ -459,7 +459,7 @@ export interface AsyncConceptChangeBatch {
 }
 
 export interface ConceptSearchRequest {
-  acceptableIn: Array<number>;
+  acceptableIn: Array<string>;
   activeFilter: boolean;
   conceptIds: Array<string>;
   definitionStatusFilter: string;
@@ -467,8 +467,8 @@ export interface ConceptSearchRequest {
   language: Array<string>;
   limit: number;
   offset: number;
-  preferredIn: Array<number>;
-  preferredOrAcceptableIn: Array<number>;
+  preferredIn: Array<string>;
+  preferredOrAcceptableIn: Array<string>;
   returnIdOnly: boolean;
   searchAfter: string;
   statedEclFilter: string;
@@ -646,7 +646,7 @@ export interface Component {
 }
 
 export interface InactivationTypeAndConceptIdList {
-  conceptIds: Collection<number>;
+  conceptIds: Collection<string>;
   inactivationIndicator: ConceptMini;
 }
 
